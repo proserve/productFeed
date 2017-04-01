@@ -1,4 +1,4 @@
-# Trade Tracker Feed Reader
+# Trade Tracker Feed Reader [DEMO](https://tradetrackerfeed.herokuapp.com)
 
 ## What this app do 
 1. Fetch and parse data from the feed url provided by the user.
@@ -14,11 +14,14 @@ install [NodeJs](www.nodejd.org)
 
 ## run 
 `npm start`
+
 ## Test 
 `npm test`
-### coverage (automatically generated after running tests)
-For frontend open : coverage/html/index.html
-For backend open : coverage/lcov-report/index.html
+
+### coverage reports are automatically generated after running tests :
+For backend open : coverage/html/index.html  [DEMO](https://tradetrackerfeed.herokuapp.com/lcov-report/index.html)
+
+For frontend open : coverage/lcov-report/index.html [DEMO](https://tradetrackerfeed.herokuapp.com/html/index.html)
 
 
 
