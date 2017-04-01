@@ -18,7 +18,7 @@ install [NodeJs](www.nodejd.org)
 ## Test 
 `npm test`
 
-### coverage (automatically generated after running tests)
+### coverage reports are automatically generated after running tests :
 For backend open : coverage/html/index.html  [DEMO](https://tradetrackerfeed.herokuapp.com/lcov-report/index.html)
 
 For frontend open : coverage/lcov-report/index.html [DEMO](https://tradetrackerfeed.herokuapp.com/html/index.html)
