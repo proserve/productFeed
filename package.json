@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "prestart": "node-sass public/app.scss public/app.css",
+    "prestart": "node-sass public/app.scss public/app.css && npm test",
     "start": "node index.js",
     "test": "istanbul cover _mocha app/api.spec.js && karma start"
   },
