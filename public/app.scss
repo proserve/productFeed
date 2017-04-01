@@ -1,0 +1,120 @@
+$background-color: #F5F5F5;
+$primaryTextColor: #444444;
+$mBlue: #00B0FF;
+$cardRowMargin: 40px;
+@import "assets/styles/loader.scss";
+@include generate-loader(#fdfcff, #3f4134, 5px);
+
+body{
+  font-family: "Roboto-light", "Helvetica", "Arial", sans-serif;
+  background-color: $background-color;
+}
+.btn{
+  text-transform: uppercase;
+  border: none;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.m-shadow{
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card { @extend .m-shadow; }
+
+.card {
+  margin-top: $cardRowMargin;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-clip: padding-box;
+}
+.card span.card-title {
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.card .card-image {
+  position: relative;
+  overflow: hidden;
+}
+.card .card-image img {
+  border-radius: 2px 2px 0 0;
+  background-clip: padding-box;
+  position: relative;
+  z-index: -1;
+}
+.card .card-image span.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.card .card-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+.card .card-content p {
+  margin: 0;
+  color: inherit;
+}
+.card .card-content span.card-title {
+  line-height: 48px;
+}
+.card .card-action {
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  padding: 16px;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.loadNotification{
+  font-size: 18px;
+  color: $background-color;
+  position: fixed;
+  z-index: 99999;
+  top: 100px;
+  background-color: $mBlue;
+  border-radius: 20px;
+  border: none;
+  @extend .m-shadow;
+}
+
+.custom-search-input{
+  padding: 3px;
+  border: solid 1px #E4E4E4;
+  border-radius: 6px;
+  background-color: #fff;
+}
+.custom-search-input input{
+  border: 0;
+  box-shadow: none;
+}
+.custom-search-input button{
+  margin: 2px 0 0 0;
+  background: none;
+  box-shadow: none;
+  border: 0;
+  color: #666666;
+  padding: 0 8px 0 10px;
+  border-left: solid 1px #ccc;
+}
+.custom-search-input button:hover{
+  border: 0;
+  box-shadow: none;
+  border-left: solid 1px #ccc;
+}
+
+.custom-search-input .glyphicon-search{
+  font-size: 23px;
+}

@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-image thumbnail" style="border: none;background-color: transparent">
+        <img class="img-responsive"
+             ng-src="{{$ctrl.product.imageURL}}">
+    </div>
+    <div class="card-content">
+        <p class="card-title ellipsis">{{$ctrl.product.name}}</p>
+        <p class="card-title ellipsis ">By : {{$ctrl.product.additionalFields.brand}}</p>
+        <p class="card-title ellipsis ">
+            <span style="font-size: 10px">{{$ctrl.product.price.currency}}</span>
+            {{$ctrl.product.price.value}}
+        </p>
+        <p class="card-title ellipsis ">Category :
+            <a ng-href="{{$ctrl.product.additionalFields.categoryURL}}" target="_blank">
+                {{$ctrl.product.categories.category.value}}
+            </a>
+        </p>
+
+    </div>
+
+    <div class="card-action">
+        <p class="card-title ellipsis">{{$ctrl.product.description}}</p>
+        <div style="display: flex; justify-content: flex-end">
+            <a ng-href="{{$ctrl.product.productURL}}" target="_blank" class="pull-right btn btn-primary">
+                Detail
+            </a>
+        </div>
+    </div>
+</div>
