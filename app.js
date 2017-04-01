@@ -10,6 +10,7 @@ const app = express();
 middlewaresConfig(app);
 app.use('/api/v1', apiRoutes);
 app.use(express.static('public'));
+app.use(express.static('coverage'));
 app.use(express.static('node_modules'));
 
 const PORT = process.env.PORT || 3000;
