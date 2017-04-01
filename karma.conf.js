@@ -55,7 +55,7 @@ module.exports = function (config) {
 		
 		// start these browsers
 		// available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-		browsers: ['Chrome'], // You may use 'ChromeCanary' or 'Chromium' as well
+		browsers: ['PhantomJS'],
 		
 		specReporter: {
 			maxLogLines: 5, // limit number of lines logged per test

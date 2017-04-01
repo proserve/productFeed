@@ -14,7 +14,10 @@ angular.module('productFeed').controller('productListController', function ($int
 		this.refreshTime = refreshTime;
 	};
 	this.loadNewProducts = () => {
-		this.newProducts.forEach(product => this.products.unshift(product));
+		for (var i = 0; i < this.newProducts.length; i++) {
+			var product = this.newProducts[i];
+			this.products.unshift(product);
+		}
 		scrollTo(document.body, 0, 1000);
 		this.newProducts = [];
 	};
@@ -40,16 +43,19 @@ angular.module('productFeed').controller('productListController', function ($int
 	};
 	
 	this.extractNewFeed = function (newProducts) {
-		newProducts.forEach(newProduct => {
+		for (let i = 0; i < newProducts.length; i++) {
+			let newProduct = newProducts[i];
 			let isExist = false;
-			for (let product of this.products) {
+			for (let j = 0; j < this.products.length; j++) {
+				let product = this.products[j];
 				if (product.productID === newProduct.productID) {
 					isExist = true;
 					break;
 				}
 			}
 			if (!isExist)
-				for (let product of this.newProducts) {
+				for (let d = 0; d < this.newProducts.length; d++) {
+					let product = this.newProducts[d];
 					if (product.productID === newProduct.productID) {
 						isExist = true;
 						break;
@@ -58,7 +64,7 @@ angular.module('productFeed').controller('productListController', function ($int
 			if (!isExist) {
 				this.newProducts.push(newProduct);
 			}
-		});
+		};
 	};
 });
 
