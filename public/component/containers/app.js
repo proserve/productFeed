@@ -1,3 +1,3 @@
 angular.module('productFeed').component('main', {
-  templateUrl: '/component/containers/App.html'
+	templateUrl: '/component/containers/app.html'
 });

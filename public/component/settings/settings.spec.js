@@ -1,10 +1,10 @@
-import 'angular';
-import 'angular-mocks';
-import 'chai';
+import "angular";
+import "angular-mocks";
+import "chai";
 
 describe('Products feed setting component', function () {
 	beforeEach(angular.mock.module('productFeed'));
-	var $componentController, controller, localStorage;
+	let $componentController, controller, localStorage;
 	beforeEach(inject((localStorageService, _$controller_) => {
 		$componentController = _$controller_;
 		controller = $componentController('settingsController', {});

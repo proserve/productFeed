@@ -18,7 +18,7 @@ angular.module('productFeed').controller('productListController', function ($int
 		scrollTo(document.body, 0, 1000);
 		this.newProducts = [];
 	};
-	this.$onInit = () =>{
+	this.$onInit = () => {
 		Product.fetchProducts(this.feedUrl).then((resp) => {
 			this.isFetchingProduct = false;
 			this.products = resp.data;
@@ -26,7 +26,7 @@ angular.module('productFeed').controller('productListController', function ($int
 			this.isFetchingProduct = false;
 		});
 		$interval(() => {
-			if(!this.isFetchingProduct){
+			if (!this.isFetchingProduct) {
 				this.isFetchingProduct = true;
 				Product.fetchProducts(this.feedUrl).then((resp) => {
 					this.extractNewFeed(resp.data);
@@ -48,13 +48,13 @@ angular.module('productFeed').controller('productListController', function ($int
 					break;
 				}
 			}
-			if(!isExist)
-			for (let product of this.newProducts) {
-				if (product.productID === newProduct.productID) {
-					isExist = true;
-					break;
+			if (!isExist)
+				for (let product of this.newProducts) {
+					if (product.productID === newProduct.productID) {
+						isExist = true;
+						break;
+					}
 				}
-			}
 			if (!isExist) {
 				this.newProducts.push(newProduct);
 			}

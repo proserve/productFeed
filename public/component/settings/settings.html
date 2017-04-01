@@ -1,17 +1,19 @@
-<div class="card" style="padding: 40px;"><form ng-submit="$ctrl.submitSetting()" role="form">
-    <legend>Setting</legend>
-    <div class="form-group">
-        <label for="feedUrl">Products Feed URL</label>
-        <input type="url" class="form-control" name="feedUrl" required id="feedUrl" placeholder="url..."
-        ng-model="$ctrl.feedUrl">
-    </div>
-    <div class="form-group">
-        <label for="refreshTime">Time of refresh (ms)</label>
-        <input type="number" class="form-control" required name="refreshTime" id="refreshTime" placeholder="Refresh Time..."
-        ng-model="$ctrl.refreshTime">
-    </div>
+<div class="card" style="padding: 40px;">
+    <form ng-submit="$ctrl.submitSetting()" role="form">
+        <legend>Setting</legend>
+        <div class="form-group">
+            <label for="feedUrl">Products Feed URL</label>
+            <input type="url" class="form-control" name="feedUrl" required id="feedUrl" placeholder="url..."
+                   ng-model="$ctrl.feedUrl">
+        </div>
+        <div class="form-group">
+            <label for="refreshTime">Time of refresh (ms)</label>
+            <input type="number" class="form-control" required name="refreshTime" id="refreshTime"
+                   placeholder="Refresh Time..."
+                   ng-model="$ctrl.refreshTime">
+        </div>
 
 
-
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form></div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

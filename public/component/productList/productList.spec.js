@@ -1,12 +1,12 @@
-import 'angular';
-import 'angular-mocks';
-import 'chai';
-import '../../constants/api';
-import data from './test-fixtures';
+import "angular";
+import "angular-mocks";
+import "chai";
+import "../../constants/api";
+import data from "./test-fixtures";
 
 describe('Products list component', function () {
 	beforeEach(angular.mock.module('productFeed'));
-	var $componentController, controller, productsListService;
+	let $componentController, controller, productsListService;
 	beforeEach(inject(($injector, Product, $httpBackend) => {
 		$componentController = $injector.get("$componentController");
 		productsListService = Product;

@@ -1,4 +1,4 @@
-@mixin generate-loader($loader-background, $loader-color, $font-size){
+@mixin generate-loader($loader-background, $loader-color, $font-size) {
   .loader {
     font-size: $font-size;
     margin: 50px auto;
@@ -7,11 +7,11 @@
     height: 11em;
     border-radius: 50%;
     background: $loader-color;
-    background: -moz-linear-gradient(left, $loader-color 10%, rgba(63,65,52, 0) 42%);
-    background: -webkit-linear-gradient(left, $loader-color 10%, rgba(63,65,52, 0) 42%);
-    background: -o-linear-gradient(left, $loader-color 10%, rgba(63,65,52, 0) 42%);
-    background: -ms-linear-gradient(left, $loader-color 10%, rgba(63,65,52, 0) 42%);
-    background: linear-gradient(to right, $loader-color 10%, rgba(63,65,52, 0) 42%);
+    background: -moz-linear-gradient(left, $loader-color 10%, rgba(63, 65, 52, 0) 42%);
+    background: -webkit-linear-gradient(left, $loader-color 10%, rgba(63, 65, 52, 0) 42%);
+    background: -o-linear-gradient(left, $loader-color 10%, rgba(63, 65, 52, 0) 42%);
+    background: -ms-linear-gradient(left, $loader-color 10%, rgba(63, 65, 52, 0) 42%);
+    background: linear-gradient(to right, $loader-color 10%, rgba(63, 65, 52, 0) 42%);
     position: relative;
     -webkit-animation: load3 1.4s infinite linear;
     animation: load3 1.4s infinite linear;

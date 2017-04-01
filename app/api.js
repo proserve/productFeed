@@ -19,7 +19,7 @@ apiRouter.get('/feed', async (req, res) => {
 			const additionalFields = product.additional.field;
 			const fields = {};
 			for (let field of additionalFields) {
-				fields[field.name] =field.value;
+				fields[field.name] = field.value;
 			}
 			product.additionalFields = fields;
 		}
